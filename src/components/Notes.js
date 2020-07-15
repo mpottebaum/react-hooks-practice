@@ -23,9 +23,7 @@ const Notes = () => {
     return <div>
         <input type='text' onChange={e => setNote(e.target.value)} value={note} />
         <button onClick={handleAddNote}>Add Note</button>
-        <ul>
-            {renderNotes()}
-        </ul>
+        <ul>{renderNotes()}</ul>
     </div>
 }
 
