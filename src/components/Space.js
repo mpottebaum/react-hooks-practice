@@ -8,16 +8,11 @@ const Space = () => {
         fetch('http://api.open-notify.org/astros.json')
             .then(resp => resp.json())
             .then(resp => setPeople(resp.people))
-        console.log('useEffect build up')
-        return () => {
-            console.log('useEffect cleanup')
-        }
     }, [])
-
+    
     const renderPeople = () => {
-        return people.map(person => <SpacePerson person={person} />)
+        return people.map((person, i) => <SpacePerson person={person} key={i + 1} />)
     }
-
     return <div>
         {
             people ?

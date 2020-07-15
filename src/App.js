@@ -5,10 +5,7 @@ import './App.css';
 
 const App = () => {
   const [ page, setPage ] = useState('notes')
-
-  const handleClick = path => {
-    setPage(path)
-  }
+  const handleClick = path => setPage(path)
   return page === 'space' ?
     <div>
       <button onClick={() => handleClick('notes')}>Notes</button>
